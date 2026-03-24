@@ -1,0 +1,21 @@
+﻿@model List<Chollo>
+
+<h1>Web Job Chollometro</h1>
+
+<h2 style="color:blue">
+    Número de chollos: @Model.Count
+</h2>
+
+@foreach (Chollo chollo in Model)
+{
+    <hr/>
+    <div style="border-style: solid">
+        <h2 style="color:blue">@chollo.Titulo</h2>
+        <p>
+            <a href="@chollo.Link">@chollo.Link</a>
+        </p>
+        <div>
+            @Html.Raw(chollo.Descripcion)
+        </div>
+    </div>
+}
